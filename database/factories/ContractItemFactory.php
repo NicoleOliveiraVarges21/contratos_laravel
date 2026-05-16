@@ -28,7 +28,7 @@ class ContractItemFactory extends Factory
             'contract_id' => Contract::factory(),
             'service_id' => Service::factory(),
             'quantity' => $quantity,
-            'subtotal' => $quantity * $price,
+            'unit_price' => $price,
         ];
     }
 }

@@ -31,7 +31,6 @@ class ContractItem extends Model
         return $this->belongsTo(Service::class);
     }
 
-    // Migrar para service
     public function getSubtotalAttribute(): float
     {
         return $this->quantity * $this->unit_price;
