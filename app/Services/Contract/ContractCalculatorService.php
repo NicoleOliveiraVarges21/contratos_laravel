@@ -15,7 +15,7 @@ class ContractCalculatorService
     public function calculate(Contract $contract): float
     {
         $total = $contract->items->sum(function ($item) {
-            return $item->unit_price * $item->quantity;
+            return $item->getSubtotalAttribute();
         });
 
         return $this->rule->apply(
